@@ -51,6 +51,8 @@ All notable, unreleased changes to this project will be documented in this file.
 - Paginate attribute values in filters - #1152 by @orzechdev
 - Fix attribute values input display - #1156 by @orzechdev
 - Fix product type translations - #1163 by @orzechdev
+- Add boolean attributes - #1157 by @piotrgrundas
+- Add date & date time attributes - #1180 by @piotrgrundas
 
 # 2.11.1
 
@@ -167,7 +169,6 @@ All notable, unreleased changes to this project will be documented in this file.
 - Update product stock management to newest design - #515 by @dominik-zeglen
 - Handle untracked products - #523 by @dominik-zeglen
 - Display correct error if there were no graphql errors - #525 by @dominik-zeglen
-- Add boolean attributes - #1157 by @piotrgrundas
 
 ## 2.0.0
 
