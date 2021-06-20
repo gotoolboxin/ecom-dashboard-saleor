@@ -530,6 +530,8 @@ enum AttributeInputTypeEnum {
   NUMERIC
   RICH_TEXT
   BOOLEAN
+  DATE
+  DATE_TIME
 }
 
 type AttributeReorderValues {
@@ -611,6 +613,8 @@ type AttributeValue implements Node {
   file: File
   richText: JSONString
   boolean: Boolean
+  date: Date
+  dateTime: DateTime
 }
 
 type AttributeValueBulkDelete {
@@ -662,6 +666,8 @@ input AttributeValueInput {
   references: [ID!]
   richText: JSONString
   boolean: Boolean
+  date: Date
+  dateTime: DateTime
 }
 
 type AttributeValueTranslatableContent implements Node {
