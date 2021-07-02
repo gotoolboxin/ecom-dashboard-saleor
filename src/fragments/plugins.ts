@@ -23,13 +23,9 @@ export const pluginConfigurationBaseFragment = gql`
 
 export const pluginConfigurationExtendedFragment = gql`
   ${configurationItemFragment}
+  ${pluginConfigurationBaseFragment}
   fragment PluginConfigurationExtendedFragment on PluginConfiguration {
-    active
-    channel {
-      id
-      name
-      slug
-    }
+    ...PluginConfigurationBaseFragment
     configuration {
       ...ConfigurationItemFragment
     }
