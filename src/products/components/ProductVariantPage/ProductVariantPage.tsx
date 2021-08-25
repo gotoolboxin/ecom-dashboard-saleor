@@ -30,6 +30,7 @@ import ProductVariantUpdateForm from "./form";
 
 export interface ProductVariantPageFormData extends MetadataFormData {
   costPrice: string;
+  sellingPrice: string;
   price: string;
   sku: string;
   trackInventory: boolean;
@@ -159,6 +160,8 @@ const ProductVariantPage: React.FC<ProductVariantPageProps> = ({
                         ? variant.price.currency
                         : variant && variant.costPrice
                         ? variant.costPrice.currency
+                        : variant && variant.sellingPrice
+                        ? variant.sellingPrice.currency
                         : ""
                     }
                     loading={loading}

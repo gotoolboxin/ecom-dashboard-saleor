@@ -22,7 +22,7 @@ const useStyles = makeStyles(
 
 interface ProductVariantPriceProps {
   currencySymbol?: string;
-  data: Record<"price" | "costPrice", string>;
+  data: Record<"price" | "costPrice" | "sellingPrice", string>;
   errors: ProductErrorFragment[];
   loading?: boolean;
   onChange(event: any);
@@ -34,7 +34,10 @@ const ProductVariantPrice: React.FC<ProductVariantPriceProps> = props => {
   const classes = useStyles(props);
   const intl = useIntl();
 
-  const formErrors = getFormErrors(["price", "costPrice"], errors);
+  const formErrors = getFormErrors(
+    ["price", "costPrice", "sellingPrice"],
+    errors
+  );
 
   const handlePriceChange = createNonNegativeValueChangeHandler(onChange);
 
@@ -83,6 +86,32 @@ const ProductVariantPrice: React.FC<ProductVariantPriceProps> = props => {
                 })
               }
               value={data.costPrice}
+              currencySymbol={currencySymbol}
+              onChange={handlePriceChange}
+              disabled={loading}
+              InputProps={{
+                inputProps: {
+                  min: "0"
+                }
+              }}
+            />
+          </div>
+          <div>
+            <PriceField
+              error={!!formErrors.sellingPrice}
+              name="sellingPrice"
+              label={intl.formatMessage({
+                defaultMessage: "Selling price"
+              })}
+              hint={
+                getProductErrorMessage(formErrors.sellingPrice, intl) ||
+                intl.formatMessage({
+                  defaultMessage: "Optional",
+                  description: "optional field",
+                  id: "productVariantPriceOptionalCostPriceField"
+                })
+              }
+              value={data.sellingPrice}
               currencySymbol={currencySymbol}
               onChange={handlePriceChange}
               disabled={loading}

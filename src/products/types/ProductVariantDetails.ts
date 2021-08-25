@@ -55,6 +55,11 @@ export interface ProductVariantDetails_productVariant_costPrice {
   currency: string;
 }
 
+export interface ProductVariantDetails_productVariant_sellingPrice {
+  __typename: "Money";
+  amount: number;
+  currency: string;
+}
 export interface ProductVariantDetails_productVariant_images {
   __typename: "ProductImage";
   id: string;
@@ -136,6 +141,7 @@ export interface ProductVariantDetails_productVariant {
   privateMetadata: (ProductVariantDetails_productVariant_privateMetadata | null)[];
   attributes: ProductVariantDetails_productVariant_attributes[];
   costPrice: ProductVariantDetails_productVariant_costPrice | null;
+  sellingPrice: ProductVariantDetails_productVariant_sellingPrice | null;
   images: (ProductVariantDetails_productVariant_images | null)[] | null;
   name: string;
   price: ProductVariantDetails_productVariant_price | null;

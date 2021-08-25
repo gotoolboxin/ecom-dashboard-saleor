@@ -1445,6 +1445,7 @@ export interface ProductTypeSortingInput {
 export interface ProductVariantBulkCreateInput {
   attributes: (AttributeValueInput | null)[];
   costPrice?: any | null;
+  sellingPrice?: any | null;
   price?: any | null;
   sku: string;
   trackInventory?: boolean | null;
@@ -1455,6 +1456,7 @@ export interface ProductVariantBulkCreateInput {
 export interface ProductVariantCreateInput {
   attributes: (AttributeValueInput | null)[];
   costPrice?: any | null;
+  sellingPrice?: any | null;
   price?: any | null;
   sku?: string | null;
   trackInventory?: boolean | null;
@@ -1466,6 +1468,7 @@ export interface ProductVariantCreateInput {
 export interface ProductVariantInput {
   attributes?: (AttributeValueInput | null)[] | null;
   costPrice?: any | null;
+  sellingPrice?: any | null;
   price?: any | null;
   sku?: string | null;
   trackInventory?: boolean | null;

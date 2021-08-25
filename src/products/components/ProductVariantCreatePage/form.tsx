@@ -15,6 +15,7 @@ import { VariantAttributeInputData } from "../ProductVariantAttributes";
 
 export interface ProductVariantCreateFormData extends MetadataFormData {
   costPrice: string;
+  sellingPrice: string;
   price: string;
   sku: string;
   trackInventory: boolean;
@@ -52,6 +53,7 @@ const initial: ProductVariantCreateFormData = {
   costPrice: "",
   metadata: [],
   price: "",
+  sellingPrice: "",
   privateMetadata: [],
   sku: "",
   trackInventory: true,

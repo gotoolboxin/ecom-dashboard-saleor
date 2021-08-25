@@ -1518,6 +1518,12 @@ export const variant = (placeholderImage: string): ProductVariant => ({
     amount: 12,
     currency: "USD"
   },
+
+  sellingPrice: {
+    __typename: "Money",
+    amount: 11,
+    currency: "USD"
+  },
   id: "var1",
   images: [
     {

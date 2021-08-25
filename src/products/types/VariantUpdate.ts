@@ -62,6 +62,12 @@ export interface VariantUpdate_productVariantUpdate_productVariant_costPrice {
   currency: string;
 }
 
+export interface VariantUpdate_productVariantUpdate_productVariant_sellingPrice {
+  __typename: "Money";
+  amount: number;
+  currency: string;
+}
+
 export interface VariantUpdate_productVariantUpdate_productVariant_images {
   __typename: "ProductImage";
   id: string;
@@ -143,6 +149,7 @@ export interface VariantUpdate_productVariantUpdate_productVariant {
   privateMetadata: (VariantUpdate_productVariantUpdate_productVariant_privateMetadata | null)[];
   attributes: VariantUpdate_productVariantUpdate_productVariant_attributes[];
   costPrice: VariantUpdate_productVariantUpdate_productVariant_costPrice | null;
+  sellingPrice: VariantUpdate_productVariantUpdate_productVariant_sellingPrice | null;
   images: (VariantUpdate_productVariantUpdate_productVariant_images | null)[] | null;
   name: string;
   price: VariantUpdate_productVariantUpdate_productVariant_price | null;
@@ -212,7 +219,11 @@ export interface VariantUpdate_productVariantStocksUpdate_productVariant_costPri
   amount: number;
   currency: string;
 }
-
+export interface VariantUpdate_productVariantStocksUpdate_productVariant_sellingPrice {
+  __typename: "Money";
+  amount: number;
+  currency: string;
+}
 export interface VariantUpdate_productVariantStocksUpdate_productVariant_images {
   __typename: "ProductImage";
   id: string;
@@ -294,6 +305,7 @@ export interface VariantUpdate_productVariantStocksUpdate_productVariant {
   privateMetadata: (VariantUpdate_productVariantStocksUpdate_productVariant_privateMetadata | null)[];
   attributes: VariantUpdate_productVariantStocksUpdate_productVariant_attributes[];
   costPrice: VariantUpdate_productVariantStocksUpdate_productVariant_costPrice | null;
+  sellingPrice: VariantUpdate_productVariantStocksUpdate_productVariant_sellingPrice | null;
   images: (VariantUpdate_productVariantStocksUpdate_productVariant_images | null)[] | null;
   name: string;
   price: VariantUpdate_productVariantStocksUpdate_productVariant_price | null;
@@ -388,6 +400,8 @@ export interface VariantUpdateVariables {
   id: string;
   attributes?: (AttributeValueInput | null)[] | null;
   costPrice?: any | null;
+  sellingPrice?: any | null;
+
   price?: any | null;
   sku?: string | null;
   trackInventory: boolean;

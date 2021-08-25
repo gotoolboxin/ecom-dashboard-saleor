@@ -54,6 +54,11 @@ export interface ProductVariant_costPrice {
   amount: number;
   currency: string;
 }
+export interface ProductVariant_sellingPrice {
+  __typename: "Money";
+  amount: number;
+  currency: string;
+}
 
 export interface ProductVariant_images {
   __typename: "ProductImage";
@@ -136,6 +141,7 @@ export interface ProductVariant {
   privateMetadata: (ProductVariant_privateMetadata | null)[];
   attributes: ProductVariant_attributes[];
   costPrice: ProductVariant_costPrice | null;
+  sellingPrice: ProductVariant_sellingPrice | null;
   images: (ProductVariant_images | null)[] | null;
   name: string;
   price: ProductVariant_price | null;

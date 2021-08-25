@@ -21,6 +21,7 @@ import { VariantAttributeInputData } from "../ProductVariantAttributes";
 
 export interface ProductVariantUpdateFormData extends MetadataFormData {
   costPrice: string;
+  sellingPrice: string;
   price: string;
   sku: string;
   trackInventory: boolean;
@@ -73,6 +74,8 @@ function useProductVariantUpdateForm(
 
   const initial: ProductVariantUpdateFormData = {
     costPrice: variant?.costPrice?.amount.toString() || "",
+    sellingPrice: variant?.sellingPrice?.amount.toString() || "",
+
     metadata: variant?.metadata?.map(mapMetadataItemToInput),
     price: variant?.price?.amount.toString() || "",
     privateMetadata: variant?.privateMetadata?.map(mapMetadataItemToInput),

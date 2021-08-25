@@ -224,6 +224,9 @@ export const fragmentVariant = gql`
     costPrice {
       ...Money
     }
+    sellingPrice {
+      ...Money
+    }
     images {
       id
       url
