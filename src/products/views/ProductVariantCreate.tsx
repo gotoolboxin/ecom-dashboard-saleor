@@ -94,6 +94,7 @@ export const ProductVariant: React.FC<ProductVariantCreateProps> = ({
               values: [attribute.value]
             })),
           costPrice: decimal(formData.costPrice),
+          sellingPrice: decimal(formData.sellingPrice),
           price: decimal(formData.price),
           product: productId,
           sku: formData.sku,
