@@ -305,6 +305,7 @@ export interface OrderDetailsFragment {
   privateMetadata: (OrderDetailsFragment_privateMetadata | null)[];
   billingAddress: OrderDetailsFragment_billingAddress | null;
   canFinalize: boolean;
+  isConfirmed: boolean;
   created: any;
   customerNote: string;
   events: (OrderDetailsFragment_events | null)[] | null;

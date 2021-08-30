@@ -98,6 +98,7 @@ export const fragmentOrderDetails = gql`
       ...AddressFragment
     }
     canFinalize
+    isConfirmed
     created
     customerNote
     events {

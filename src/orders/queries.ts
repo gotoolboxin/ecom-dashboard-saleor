@@ -49,6 +49,7 @@ export const orderListQuery = gql`
           number
           paymentStatus
           status
+          isConfirmed
           total {
             __typename
             gross {
