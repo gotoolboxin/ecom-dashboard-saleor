@@ -172,6 +172,7 @@ export const ProductVariant: React.FC<ProductUpdateProps> = ({
           values: [attribute.value]
         })),
         costPrice: decimal(data.costPrice),
+        sellingPrice: decimal(data.sellingPrice),
         id: variantId,
         price: decimal(data.price),
         removeStocks: data.removeStocks,
