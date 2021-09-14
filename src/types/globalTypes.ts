@@ -469,6 +469,7 @@ export enum LanguageCodeEnum {
   KA = "KA",
   KM = "KM",
   KO = "KO",
+  KN="KN",
   LT = "LT",
   MN = "MN",
   MY = "MY",
