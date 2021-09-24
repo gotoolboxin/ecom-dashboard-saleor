@@ -154,6 +154,8 @@ export const fragmentOrderDetails = gql`
     user {
       id
       email
+      phone
+      name
     }
     userEmail
     availableShippingMethods {

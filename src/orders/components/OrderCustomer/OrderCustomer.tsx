@@ -216,9 +216,9 @@ const OrderCustomer: React.FC<OrderCustomerProps> = props => {
               </Typography>
             </div>
 
-            {maybe(() => order.userEmail) === undefined ? (
+            {maybe(() => order.user.phone) === undefined ? (
               <Skeleton />
-            ) : order.userEmail === null ? (
+            ) : order.user.phone === null ? (
               <Typography>
                 <FormattedMessage
                   defaultMessage="Not set"
@@ -227,11 +227,8 @@ const OrderCustomer: React.FC<OrderCustomerProps> = props => {
                 />
               </Typography>
             ) : (
-              <ExternalLink
-                href={`mailto:${maybe(() => order.userEmail)}`}
-                typographyProps={{ color: "primary" }}
-              >
-                {maybe(() => order.userEmail)}
+              <ExternalLink href="#" typographyProps={{ color: "primary" }}>
+                {maybe(() => order.user.phone)}
               </ExternalLink>
             )}
           </CardContent>
@@ -271,9 +268,7 @@ const OrderCustomer: React.FC<OrderCustomerProps> = props => {
             {shippingAddress.companyName && (
               <Typography>{shippingAddress.companyName}</Typography>
             )}
-            <Typography>
-              {shippingAddress.firstName} {shippingAddress.lastName}
-            </Typography>
+            <Typography>{shippingAddress.name}</Typography>
             <Typography>
               {shippingAddress.streetAddress1}
               <br />
@@ -335,9 +330,7 @@ const OrderCustomer: React.FC<OrderCustomerProps> = props => {
             {billingAddress.companyName && (
               <Typography>{billingAddress.companyName}</Typography>
             )}
-            <Typography>
-              {billingAddress.firstName} {billingAddress.lastName}
-            </Typography>
+            <Typography>{billingAddress.name}</Typography>
             <Typography>
               {billingAddress.streetAddress1}
               <br />
