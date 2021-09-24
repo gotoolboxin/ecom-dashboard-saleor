@@ -217,13 +217,9 @@ export const OrderList: React.FC<OrderListProps> = props => {
               </TableCell>
               <TableCell className={classes.colCustomer}>
                 {maybe(() => order.billingAddress) ? (
-                  <>
-                    {order.billingAddress.firstName}
-                    &nbsp;
-                    {order.billingAddress.lastName}
-                  </>
-                ) : maybe(() => order.userEmail) !== undefined ? (
-                  order.userEmail
+                  <>{order.billingAddress.name}</>
+                ) : maybe(() => order.userPhone) !== undefined ? (
+                  order.userPhone
                 ) : (
                   <Skeleton />
                 )}

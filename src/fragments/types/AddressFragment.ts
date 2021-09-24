@@ -22,6 +22,7 @@ export interface AddressFragment {
   firstName: string;
   id: string;
   lastName: string;
+  name: string;
   phone: string | null;
   postalCode: string;
   streetAddress1: string;
