@@ -157,6 +157,7 @@ export const orders: OrderList_orders_edges_node[] = [
       id: "QWRkcmVzczoyOA==",
       lastName: "Randall",
       phone: "",
+      name: "",
       postalCode: "30356",
       streetAddress1: "326 Palmer Rapids Apt. 717",
       streetAddress2: ""
