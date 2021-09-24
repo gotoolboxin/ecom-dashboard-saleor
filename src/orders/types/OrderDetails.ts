@@ -34,6 +34,7 @@ export interface OrderDetails_order_billingAddress {
   country: OrderDetails_order_billingAddress_country;
   countryArea: string;
   firstName: string;
+  name: string;
   id: string;
   lastName: string;
   phone: string | null;
@@ -200,6 +201,7 @@ export interface OrderDetails_order_shippingAddress {
   countryArea: string;
   firstName: string;
   id: string;
+  name: string;
   lastName: string;
   phone: string | null;
   postalCode: string;
@@ -268,6 +270,8 @@ export interface OrderDetails_order_user {
   __typename: "User";
   id: string;
   email: string;
+  name: string;
+  phone: string;
 }
 
 export interface OrderDetails_order_availableShippingMethods_price {

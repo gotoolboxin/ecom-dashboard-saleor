@@ -22,6 +22,7 @@ export interface OrderList_orders_edges_node_billingAddress {
   country: OrderList_orders_edges_node_billingAddress_country;
   countryArea: string;
   firstName: string;
+  name: string;
   id: string;
   lastName: string;
   phone: string | null;
